@@ -1,0 +1,100 @@
+Rose
+Lavender
+Sunflower
+Daffodil
+Tulip
+Marigold
+Daisy
+Lily
+Orchid
+Jasmine
+Fern
+Aloe Vera
+Basil
+Mint
+Thyme
+Rosemary
+Sage
+Parsley
+Cilantro
+Oregano
+Bamboo
+Cactus
+Snake Plant
+Spider Plant
+Pothos
+Monstera
+Fiddle Leaf Fig
+Rubber Plant
+ZZ Plant
+Peace Lily
+Begonia
+Petunia
+Geranium
+Zinnia
+Chrysanthemum
+Snapdragon
+Pansy
+Foxglove
+Coneflower
+Black-eyed Susan
+Hydrangea
+Camellia
+Rhododendron
+Azalea
+Peony
+Bleeding Heart
+Iris
+Anemone
+Crocus
+Hyacinth
+Hosta
+Coleus
+Caladium
+Impatiens
+Nasturtium
+Salvia
+Verbena
+Yarrow
+Aster
+Lobelia
+Celosia
+Lantana
+Sweet Alyssum
+Morning Glory
+Honeysuckle
+Wisteria
+Climbing Rose
+Trumpet Vine
+Clematis
+Bougainvillea
+Gardenia
+Magnolia
+Dogwood
+Maple
+Oak
+Pine
+Birch
+Willow
+Elm
+Cedar
+Juniper
+Eucalyptus
+Palm
+Banana Plant
+Fig Tree
+Lemon Tree
+Orange Tree
+Apple Tree
+Pear Tree
+Cherry Tree
+Avocado Tree
+Grapevine
+Tomato Plant
+Pepper Plant
+Carrot Plant
+Lettuce
+Spinach
+Kale
+Corn
+Wheat
