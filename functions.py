@@ -9,15 +9,15 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-def menu0():
+def Menu0():
     print("1: Start generating")
     print("2: More info")
     print("Q: Close program")
 
-def more_info():
+def MoreInfo():
     print(bcolors.HEADER + "This generator will generate fake/trash data\nIt will help you learn make operation in database in SQL :)" + bcolors.ENDC)
 
-def insert_names():
+def InsertNames():
     print("0: Use random column names")
     print("Insert column name: ")
 
@@ -32,5 +32,16 @@ def DataTypes():
     print("6: DATETIME")
     print("7: TIME")
     print("8: YEAR")
-    print("9: Delete last one")
+    print("D: Delete Column")
     print("Q: back")
+
+def InsertDataTypes(file):
+    DataTypes()
+    column_name=open(file,'r')
+    for i in column_name:
+        print(i, end=': ')
+        a=input()
+        if (a == '1'):
+            # column_types.append(a)
+            print(a)
+    column_name.close()

@@ -5,48 +5,51 @@ import time
 from datetime import datetime
 import functions as f 
 
-RANDOM_COLUMN_NAMES=0
+MAX_COLUMNS=20
 
 column_name =[]
 column_types=[]
 
 while True:
-    f.menu0()
+    f.Menu0()
     a=msvcrt.getwch()
     print(a)
     if(a=='1'):
         os.system("cls")
-        f.insert_names()
+        f.InsertNames()
         a = input("Column name: ")
         if (a == '0'):
-            RANDOM_COLUMN_NAMES=1
             os.system("cls")
-            # TODO
+            f.InsertDataTypes('data/ColumnNames.txt')     
         else:
             column_name.append(a)
             os.system("cls")
             while(True):
                 print("0: END")
                 print("1: Delete last one")
-                print("2: Save to file")
                 print(column_name)
                 a = input("Column name: ")
+
                 if (a == '0'):
-                    f.DataTypes()
-                    for i in column_name:
-                        print(i, end=': ')
-                        a=input()
-                        if (a == '1'):
-                        $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$if (a == '1'):
-                            column_types.append(a)
+                    i=0
+                    FileName=''
+                    while(True):
+                        if not (os.path.isfile('data/ColumnNames'+str(i)+'.txt')):
+                            FileName='data/ColumnNames'+str(i)+'.txt'
+                            ColumnNames=open(FileName,'w')
+                            for q in column_name:
+                                ColumnNames.write(q+'\n')
+                            ColumnNames.close()
+                            break
+                        i=i+1
+                    f.InsertDataTypes(FileName)
+                    break
+
                 elif (a == '1'):
                     if column_name:
                         column_name.pop()
                     else:
                         print(f.bcolors.WARNING +"It's empty!!"+ f.bcolors.ENDC)
-                elif (a == '2'):
-                    # TODO
-                    print("opt 2")
                 elif a:
                     column_name.append(a)
                 else:
@@ -56,7 +59,7 @@ while True:
             
     if (a == '2'):
         os.system("cls")
-        f.more_info()
+        f.MoreInfo()
         continue
     if (a == 'q' or a == 'Q'):
         os.system("cls")
