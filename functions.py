@@ -80,3 +80,39 @@ def InsertDataTypes(file):
         j=j+1
 # working
 # now GENERATE ALREADY!!!
+
+def GenerateRows():
+    print("Number of rows: ")
+
+# additional opts
+# like id starts from.. zakresy???? nah?
+
+    # how_much_rows=input()
+    #     if(how_much_rows.isnumeric()):
+    #         how_much_rows=int(how_much_rows)
+    #         if(how_much_rows>=0):
+    #             break
+    #         elif(how_much_rows==-1):
+    #             insert_column_names()
+    #             break
+    #     else:
+    #         os.system("cls")
+    #         print("Wrong!! type NUMBERS")
+
+# save_to_file="INSERT INTO ___TABLE___ "
+#     if(list_of_columns_names):
+#         save_to_file="INSERT INTO ___TABLE___ ("
+#         for i in list_of_columns_names:
+#             save_to_file+=i+", "
+#         save_to_file=save_to_file[:-2]
+#         save_to_file+=") VALUES "
+#     else:
+#         save_to_file+="VALUES "
+#     for i in range(how_much_rows):
+#         save_to_file+=generate_row(i)
+#     print("Now check file \"data.txt\"")
+    
+#     f = open("data.txt", "w")
+#     f.write(save_to_file[:-2]+";")
+#     f.close()
+
