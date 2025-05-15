@@ -33,15 +33,50 @@ def DataTypes():
     print("7: TIME")
     print("8: YEAR")
     print("D: Delete Column")
-    print("Q: back")
 
 def InsertDataTypes(file):
+    ColumnTypes=[]
     DataTypes()
     column_name=open(file,'r')
+    DATA=[]
     for i in column_name:
-        print(i, end=': ')
-        a=input()
-        if (a == '1'):
-            # column_types.append(a)
-            print(a)
+        DATA.append(i)
+    for i in DATA:
+        while(True):
+            a=input('Type for\'' + i[0:len(i)-1] + '\': ')
+            if (a == '0'):
+                # todo
+                print(ColumnTypes)
+            if (a == 'D' or a=='d'):
+                ColumnTypes.append('0')
+            elif (a == '1'):
+                ColumnTypes.append('1')
+            elif (a == '2'):
+                ColumnTypes.append('2')
+            elif (a == '3'):
+                ColumnTypes.append('3')
+            elif (a == '4'):
+                ColumnTypes.append('4')
+            elif (a == '5'):
+                ColumnTypes.append('5')
+            elif (a == '6'):
+                ColumnTypes.append('6')
+            elif (a == '7'):
+                ColumnTypes.append('7')
+            elif (a == '8'):
+                ColumnTypes.append('8')
+            else:
+                print(bcolors.WARNING +"Something is wrong.."+ bcolors.ENDC)
+                continue
+            break
     column_name.close()
+    column_write=open(file,'w')
+    j=0
+    for i in DATA:
+        if(ColumnTypes[j]=='0'):
+            j=j+1
+            continue
+        column_write.write(i[0:len(i)-1]+' '+ColumnTypes[j]+'\n')
+        j=j+1
+# working
+# now GENERATE ALREADY!!!

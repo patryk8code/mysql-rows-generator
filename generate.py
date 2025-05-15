@@ -1,9 +1,10 @@
+import functions as f 
+
 import os
 import random
-import msvcrt
 import time
 from datetime import datetime
-import functions as f 
+import msvcrt
 
 MAX_COLUMNS=20
 
