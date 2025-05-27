@@ -12,6 +12,8 @@ column_name =[]
 column_types=[]
 
 while True:
+    f.GenerateRows(["id","imie","nazwisko","wiek"],[1,2,2,1])
+    continue
     f.Menu0()
     a=msvcrt.getwch()
     print(a)
@@ -24,14 +26,15 @@ while True:
             f.InsertDataTypes('data/ColumnNames.txt')     
         else:
             column_name.append(a)
-            os.system("cls")
             while(True):
+                os.system("cls")
                 print("0: END")
                 print("1: Delete last one")
                 print(column_name)
                 a = input("Column name: ")
 
                 if (a == '0'):
+                    os.system("cls")
                     i=0
                     FileName=''
                     while(True):

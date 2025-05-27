@@ -1,3 +1,4 @@
+import os
 # this is very first menu
 class bcolors:
     HEADER = '\033[95m'
@@ -37,16 +38,19 @@ def DataTypes():
 def InsertDataTypes(file):
     ColumnTypes=[]
     DataTypes()
-    column_name=open(file,'r')
+    ColumnName=open(file,'r')
     DATA=[]
-    for i in column_name:
+    for i in ColumnName:
         DATA.append(i)
     for i in DATA:
         while(True):
+            os.system("cls")
+            DataTypes()
             a=input('Type for\'' + i[0:len(i)-1] + '\': ')
             if (a == '0'):
-                # todo
-                print(ColumnTypes)
+                # AFTER COLUM TYPES INSERT
+                GenerateRows(ColumnName,ColumnTypes)
+                break
             if (a == 'D' or a=='d'):
                 ColumnTypes.append('0')
             elif (a == '1'):
@@ -69,7 +73,7 @@ def InsertDataTypes(file):
                 print(bcolors.WARNING +"Something is wrong.."+ bcolors.ENDC)
                 continue
             break
-    column_name.close()
+    ColumnName.close()
     column_write=open(file,'w')
     j=0
     for i in DATA:
@@ -78,22 +82,31 @@ def InsertDataTypes(file):
             continue
         column_write.write(i[0:len(i)-1]+' '+ColumnTypes[j]+'\n')
         j=j+1
-# working
-# now GENERATE ALREADY!!!
 
-def GenerateRows():
-    print("Number of rows: ")
+def GenerateRows(Names,Types):
+    how_much_rows=input("Number of rows: ")
+    ROWS="INSERT INTO COLUMN("
+    try:
+        how_much_rows=int(how_much_rows)
+        if (how_much_rows>0 and how_much_rows<=1000000000):
+            for i in Names:
+                ROWS=ROWS+"\""+i+"\","
+            ROWS=ROWS+") VALUES "
+        else:
+            print("Type number from 1 to 1 000 000 000") 
+    except:
+        print("Type NUMBERS !")
+    a=input("asdaaa")
 
 # additional opts
 # like id starts from.. zakresy???? nah?
 
-    # how_much_rows=input()
     #     if(how_much_rows.isnumeric()):
     #         how_much_rows=int(how_much_rows)
     #         if(how_much_rows>=0):
     #             break
     #         elif(how_much_rows==-1):
-    #             insert_column_names()
+    #             insert_ColumnNames()
     #             break
     #     else:
     #         os.system("cls")
