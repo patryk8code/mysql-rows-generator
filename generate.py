@@ -12,7 +12,7 @@ column_name =[]
 column_types=[]
 
 while True:
-    f.GenerateRows(["id","imie","nazwisko","wiek"],[1,2,2,1])
+    f.GenerateRows(["id","imie","nazwisko","wiek"],[1,2,5,5])
     continue
     f.Menu0()
     a=msvcrt.getwch()
