@@ -12,8 +12,8 @@ column_name =[]
 column_types=[]
 
 while True:
-    f.GenerateRows(["id","imie","nazwisko","wiek"],[1,2,5,5])
-    continue
+    # f.GenerateRows(["id","imie","nazwisko","wiek","c1","c2","c3"],[0,1,2,3,0,0,8])
+    # continue
     f.Menu0()
     a=msvcrt.getwch()
     print(a)
@@ -47,6 +47,13 @@ while True:
                             break
                         i=i+1
                     f.InsertDataTypes(FileName)
+                    while(True):
+                        os.system("cls")
+                        print("Additional options:")
+                        print("0: No.")
+                        print("1: Set range")
+                        print("2: Use costum files with names")
+                        # todo
                     break
 
                 elif (a == '1'):
