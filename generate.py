@@ -33,13 +33,13 @@ while True:
                 print(column_name)
                 a = input("Column name: ")
 
-                if (a == '0'):
+                if (a == '0' or a==""):
                     os.system("cls")
                     i=0
                     FileName=''
                     while(True):
-                        if not (os.path.isfile('data/ColumnNames'+str(i)+'.txt')):
-                            FileName='data/ColumnNames'+str(i)+'.txt'
+                        if not (os.path.isfile('save/ColumnNames'+str(i)+'.txt')):
+                            FileName='save/ColumnNames'+str(i)+'.txt'
                             ColumnNames=open(FileName,'w')
                             for q in column_name:
                                 ColumnNames.write(q+'\n')
@@ -47,13 +47,13 @@ while True:
                             break
                         i=i+1
                     f.InsertDataTypes(FileName)
-                    while(True):
-                        os.system("cls")
-                        print("Additional options:")
-                        print("0: No.")
-                        print("1: Set range")
-                        print("2: Use costum files with names")
-                        # todo
+                    # while(True):
+                    #     os.system("cls")
+                    #     print("Additional options:")
+                    #     print("0: No.")
+                    #     print("1: Set ranges")
+                    #     print("2: Use costum files with names")
+                    #     # todo in future or smth
                     break
 
                 elif (a == '1'):
